@@ -7,6 +7,7 @@ app.get("/greet",(req,res)=>{
 
 app.get("/setname",(req,res)=>{
   res.cookie("name","yamada") //* responseも返さないと
+  res.cookie("animal","cat") //* 複数かけるよ
   res.send("cookieをおくったよ")
 })
 
