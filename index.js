@@ -6,7 +6,8 @@ app.use(cookieParser()) //* ミドルウェアで全部のリクエスト
 
 app.get("/greet",(req,res)=>{
 console.log(req.cookies) //* { name: 'yamada', animal: 'cat' }
-  res.send("やっほ")
+const {name="anonymous"} = req.cookies
+  res.send(`やっほ- ${name}`)
 })
 
 app.get("/setname",(req,res)=>{
